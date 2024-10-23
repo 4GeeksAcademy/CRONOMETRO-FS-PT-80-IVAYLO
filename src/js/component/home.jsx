@@ -1,26 +1,22 @@
 import React from "react";
+import Digit from "./digit.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+// Componente principal Home
+const Home = ({ segundos }) => {
+    // Convertimos los segundos a string y rellenamos con ceros a la izquierda para asegurarnos de tener siempre 6 dígitos.
+    const stringSegundos = segundos.toString().padStart(6, "0");
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+    return (
+        <div className="text-center">
+            <Digit value={<i className="fas fa-clock"></i>} />
+            <Digit value={stringSegundos[0]} />
+            <Digit value={stringSegundos[1]} />
+            <Digit value={stringSegundos[2]} />
+            <Digit value={stringSegundos[3]} />
+            <Digit value={stringSegundos[4]} />
+            <Digit value={stringSegundos[5]} />
+        </div>
+    );
 };
 
 export default Home;

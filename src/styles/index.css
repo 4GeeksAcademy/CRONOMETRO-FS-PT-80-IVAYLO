@@ -10,3 +10,19 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.digit {
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    font-size: 48px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+body{
+    background-color: black;
+}
