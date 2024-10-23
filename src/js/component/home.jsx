@@ -3,7 +3,6 @@ import Digit from "./digit.jsx";
 
 // Componente principal Home
 const Home = ({ segundos }) => {
-    // Convertimos los segundos a string y rellenamos con ceros a la izquierda para asegurarnos de tener siempre 6 dígitos.
     const stringSegundos = segundos.toString().padStart(6, "0");
 
     return (
